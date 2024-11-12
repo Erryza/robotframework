@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.11.3 on win32)" generated="2024-11-12T14:49:18.819591" rpa="false" schemaversion="5">
+<suite id="s1" name="Orange" source="C:\coba\test-cases\orange.robot">
+<test id="s1-t1" name="Login Orange" line="27">
+<kw name="Open Page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-12T14:49:19.055989" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com'.</msg>
+<msg time="2024-11-12T14:49:19.431478" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at C:\webdriver\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.117); currently, chromedriver 130.0.6723.116 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-12T14:49:19.055989" elapsed="5.759173"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-12T14:49:24.815162" elapsed="0.024809"/>
+</kw>
+<status status="PASS" start="2024-11-12T14:49:19.055989" elapsed="5.783982"/>
+</kw>
+<kw name="Login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='username']</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-12T14:49:24.839971" elapsed="0.508397"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-12T14:49:25.354345" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>xpath=//input[@name='username']</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-12T14:49:25.354345" elapsed="0.084797"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-12T14:49:27.439294" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-12T14:49:25.439142" elapsed="2.000152"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='password']</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-12T14:49:27.439294" elapsed="0.012730"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-12T14:49:27.457705" level="INFO">Typing password into text field 'xpath=//input[@name='password']'.</msg>
+<msg time="2024-11-12T14:49:27.478719" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath=//input[@name='password']</arg>
+<arg>${pass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-12T14:49:27.457110" elapsed="0.083393"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-12T14:49:29.542563" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-12T14:49:27.542110" elapsed="2.000453"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-12T14:49:29.542563" level="INFO">Clicking button 'xpath=//button[normalize-space()='Login']'.</msg>
+<arg>xpath=//button[normalize-space()='Login']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-12T14:49:29.542563" elapsed="1.170893"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-12T14:49:35.716886" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-12T14:49:30.716599" elapsed="5.000287"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-12T14:49:35.717408" elapsed="2.185657"/>
+</kw>
+<status status="PASS" start="2024-11-12T14:49:24.839971" elapsed="13.063094"/>
+</kw>
+<status status="PASS" start="2024-11-12T14:49:19.055989" elapsed="18.848160"/>
+</test>
+<status status="PASS" start="2024-11-12T14:49:18.820598" elapsed="19.083551"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Orange">Orange</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-11-12T14:49:19.431478" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at C:\webdriver\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.117); currently, chromedriver 130.0.6723.116 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
